@@ -17,7 +17,7 @@ cat(process.argv[2]);
 
 async function webCat(url) {
   try {
-    let response = axios.get(url);
+    let response = await axios.get(url);
     console.log(response.data);
   } catch (err) {
     console.error(`Error fetching ${url}: ${err}`);
